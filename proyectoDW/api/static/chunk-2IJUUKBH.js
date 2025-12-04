@@ -1,0 +1,1 @@
+import{$a as o,Fa as i,_a as a,sb as s}from"./chunk-5T4QEHQE.js";import"./chunk-NWJ5J3BN.js";var n=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=i({type:t,selectors:[["app-sitio-detail"]],decls:2,vars:0,template:function(e,p){e&1&&(a(0,"p"),s(1,"sitio-detail works!"),o())},encapsulation:2})};export{n as SitioDetailPage};

@@ -1,0 +1,25 @@
+/* Fondo global para TODA la app */
+ion-app {
+  --background: none;
+  background: url('https://i.imgur.com/90zjO3q.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Forzar que TODOS los ion-content sean transparentes */
+ion-content {
+  --background: transparent !important;
+  background: rgba(225, 225, 225, 0.55);
+}
+
+ion-content::part(background) {
+  background: transparent !important;
+}
+
+/* Evitar que ion-padding meta fondo blanco en algunas builds */
+.ion-padding {
+  --background: transparent !important;
+}
+
+ion-header, ion-toolbar {
+  --background: transparent;
+}

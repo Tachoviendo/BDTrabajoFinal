@@ -1,0 +1,1 @@
+import{$a as s,Fa as t,_a as a,sb as i}from"./chunk-5T4QEHQE.js";import"./chunk-NWJ5J3BN.js";var p=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-pozos-detail"]],decls:2,vars:0,template:function(e,l){e&1&&(a(0,"p"),i(1,"pozos-detail works!"),s())},encapsulation:2})};export{p as PozosDetailPage};

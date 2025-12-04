@@ -1,0 +1,9 @@
+.popover{
+
+ --background: transparent;
+  --border-radius: 20px;
+  --detail-icon-color: transparent;
+  --detail-icon-font-size: 20px;
+    --border-width: 0;
+
+}
