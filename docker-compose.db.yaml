@@ -12,11 +12,8 @@ services:
       POSTGRES_DB: raul_silva_db
 
     volumes:
-      # Scripts de inicialización (se ejecutan automáticamente)
       # PostgreSQL ejecuta los .sql en orden alfabético
       - ./scripts:/docker-entrypoint-initdb.d:ro
-      # Persistencia de datos
-      - postgres_data_objetivo3:/var/lib/postgresql/data
 
     ports:
       - "5432:5432"

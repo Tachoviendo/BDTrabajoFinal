@@ -155,15 +155,50 @@ VALUES
   (1, 15);
 
 
-INSERT INTO intervalo_litologico (id_pozo, desde_m, hasta_m, material)
-VALUES
-  (1, 0, 12, 'Arenisca'),
-  (1, 12, 23, 'Limo'),
-  (1, 23, 31, 'Arcilla');
-
 INSERT INTO intervalo_diametro_perforacion
   (id_pozo, desde_m, hasta_m, diametro_pulg)
 VALUES
   (1,   0,   20, 8),
   (1, 20,   110,  6),
   (1, 110,   120.5,  6);
+
+INSERT INTO intervalo_litologico (id_pozo, desde_m, hasta_m, material)
+VALUES
+  (1, 0, 12, 'Arenisca'),
+  (1, 12, 23, 'Limo'),
+  (1, 23, 31, 'Arcilla');
+
+INSERT INTO sesion (fecha, hora)
+VALUES
+  ('2025-12-01', '12:12'),
+  ('2025-12-02', '12:13'),
+  ('2025-12-03', '14:12');
+
+INSERT INTO usuario_sesion(id_usuario, id_sesion)
+VALUES
+    (1, 1),
+    (2,2),
+    (3,3);
+
+
+
+
+
+INSERT INTO tabla(nombre_tabla, campo, dato_antes, dato_despues);
+VALUES
+    ('pozo', 'empresa', "Coca-cola", "pepsi"),
+    ('informe', 'titulo', "Informe", "Informe2"),
+    ('sitio', 'departamento', "Artigas", "Salto");
+
+
+INSERT INTO modificacion(fecha, hora, tipo_accion, id_usuario, nombre_tabla)
+VALUES
+  ("2025-12-04", "12:13", "modificar", 1, "pozo"),
+  ("2025-12-04", "12:13", "modificar", 2, "informe"),
+  ("2025-12-04", "12:13", "modificar", 3, "sitio");
+
+
+
+
+
+

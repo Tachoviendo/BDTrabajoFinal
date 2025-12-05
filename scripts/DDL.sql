@@ -1,7 +1,7 @@
 CREATE EXTENSION IF NOT EXISTS citext;
 
 CREATE TABLE usuario (
-  id_usuario      BIGSERIAL PRIMARY KEY,
+  id_usuario      SERIAL PRIMARY KEY,
   email           CITEXT NOT NULL UNIQUE,
   nombre          VARCHAR NOT NULL,
   password        VARCHAR NOT NULL,    
@@ -102,3 +102,43 @@ CREATE TABLE informe (
   generado_por BIGINT NOT NULL REFERENCES usuario(id_usuario),
   generado_en  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+    CREATE TABLE tabla(
+    nombre_tabla VARCHAR(40) PRIMARY KEY, 
+    campo VARCHAR(50),
+    dato_antes VARCHAR(100), 
+    dato_despues VARCHAR(100)
+);
+
+
+
+CREATE TABLE modificacion(
+    id_modificacion SERIAL PRIMARY KEY,
+    fecha DATE,
+    hora VARCHAR (50),
+    tipo_accion VARCHAR(50),
+    id_usuario INT, 
+    nombre_tabla VARCHAR NOT NULL, 
+    FOREING KEY (nombre_tabla) REFERENCES tabla(nombre_tabla),
+    FOREING KEY (id_usuario) REFERENCES usuario(id_usuario) 
+    
+);
+
+CREATE TABLE sesion(
+    id_sesion SERIAL PRIMARY KEY, 
+    fecha DATE,
+    hora VARCHAR (30)
+);
+
+CREATE TABLE usuario_sesion(
+    id_usuario INT REFERENCES usuario(id_usuario),
+    id_sesion INT REFERENCES sesion(id_sesion),
+    PRIMARY KEY (id_usuario, id_sesion)
+);
+
+
+
+
+
+
+
